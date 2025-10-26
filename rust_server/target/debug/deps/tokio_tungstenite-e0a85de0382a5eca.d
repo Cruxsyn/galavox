@@ -1,0 +1,10 @@
+D:\Personal Projects\galavox\rust_server\target\debug\deps\tokio_tungstenite-e0a85de0382a5eca.d: C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\lib.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\compat.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\connect.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\handshake.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\stream.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\tls.rs
+
+D:\Personal Projects\galavox\rust_server\target\debug\deps\libtokio_tungstenite-e0a85de0382a5eca.rmeta: C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\lib.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\compat.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\connect.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\handshake.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\stream.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\tls.rs
+
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\lib.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\compat.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\connect.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\handshake.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\stream.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.28.0\src\tls.rs:

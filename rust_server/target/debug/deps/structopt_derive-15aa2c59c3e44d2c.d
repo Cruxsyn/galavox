@@ -1,0 +1,10 @@
+D:\Personal Projects\galavox\rust_server\target\debug\deps\structopt_derive-15aa2c59c3e44d2c.d: C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\lib.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\attrs.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\doc_comments.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\parse.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\spanned.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\ty.rs
+
+D:\Personal Projects\galavox\rust_server\target\debug\deps\structopt_derive-15aa2c59c3e44d2c.dll: C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\lib.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\attrs.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\doc_comments.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\parse.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\spanned.rs C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\ty.rs
+
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\lib.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\attrs.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\doc_comments.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\parse.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\spanned.rs:
+C:\Users\chris\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\structopt-derive-0.4.18\src\ty.rs:
