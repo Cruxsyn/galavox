@@ -1,24 +1,21 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import type { GameState, Planet } from '../types/gameState';
 import { deepFreeze } from '../types/gameState';
+import { useGameServerStore } from '../stores/gameServerStore';
 
-interface UseGameServerReturn {
-  gameState: GameState | null;
-  isConnected: boolean;
-  error: string | null;
-  reconnect: () => void;
-  sendPosition: (x: number, y: number, z: number) => void;
-}
-
-export function useGameServer(url: string = 'ws://localhost:8080'): UseGameServerReturn {
-  const [gameState, setGameState] = useState<GameState | null>(null);
-  const [isConnected, setIsConnected] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+export function useGameServer(url: string = 'ws://localhost:8080') {
+  const {
+    setGameState,
+    setIsConnected,
+    setError,
+    setConnectFn,
+    setWsRef,
+  } = useGameServerStore();
+  
   const wsRef = useRef<WebSocket | null>(null);
   const isConnectingRef = useRef(false);
 
   const connect = useCallback(() => {
-
     // Wait 100ms before starting connection to avoid thrashing/rapid reconnects
     if (wsRef.current) {
       // If there's an existing socket, don't delay
@@ -37,6 +34,7 @@ export function useGameServer(url: string = 'ws://localhost:8080'): UseGameServe
       console.log('🚀 Connecting to Crux Server...');
       const socket = new WebSocket(url);
       wsRef.current = socket;
+      setWsRef(socket);
 
       socket.onopen = () => {
         console.log('✅ Connected to server!');
@@ -79,6 +77,7 @@ export function useGameServer(url: string = 'ws://localhost:8080'): UseGameServe
         setIsConnected(false);
         isConnectingRef.current = false;
         wsRef.current = null;
+        setWsRef(null);
       };
 
       return socket;
@@ -88,9 +87,18 @@ export function useGameServer(url: string = 'ws://localhost:8080'): UseGameServe
       isConnectingRef.current = false;
       return null;
     }
-  }, [url]);
+  }, [url, setIsConnected, setError, setGameState, setWsRef]);
 
   useEffect(() => {
+    // Store the connect function in the store for reconnect
+    setConnectFn(() => {
+      if (wsRef.current) {
+        wsRef.current.close();
+      }
+      isConnectingRef.current = false;
+      connect();
+    });
+    
     const socket = connect();
 
     return () => {
@@ -99,32 +107,12 @@ export function useGameServer(url: string = 'ws://localhost:8080'): UseGameServe
         socket.close();
       }
       wsRef.current = null;
+      setWsRef(null);
       isConnectingRef.current = false;
+      setConnectFn(null);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty array - only connect once
-
-  const reconnect = useCallback(() => {
-    if (wsRef.current) {
-      wsRef.current.close();
-    }
-    isConnectingRef.current = false;
-    connect();
-  }, [connect]);
-
-  const sendPosition = useCallback((x: number, y: number, z: number) => {
-    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-      // Encode position as binary (3 floats = 12 bytes)
-      const buffer = new ArrayBuffer(12);
-      const view = new DataView(buffer);
-      view.setFloat32(0, x, true);  // little-endian
-      view.setFloat32(4, y, true);
-      view.setFloat32(8, z, true);
-      wsRef.current.send(buffer);
-    }
-  }, []);
-
-  return { gameState, isConnected, error, reconnect, sendPosition };
 }
 
 // Temporary decoder function - this is a simplified version
